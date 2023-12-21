@@ -6,21 +6,17 @@
 
 // Exercise 2
 const number = prompt("Enter your number: ");
-if (Math.round(number) > 0 && number.length == 5) {
-  const numberSplit = number.split("");
-  let result = [];
+const numberSplit = number.split("");
+let result = [];
 
-  numberSplit.map((number) => {
-    if (parseInt(number)) {
-      result = [...result, number];
+if (number.length == 5) {
+  numberSplit.forEach((number) => {
+    if (Number(number) >= 0) {
+      result.push(number);
     }
   });
 
-  if (result.length === 5) {
-    alert(result.slice("").join(" "));
-  } else {
-    alert("Write correct number!");
-  }
+  alert(result.join(" "));
 } else {
   alert("Write a positive five-digit number!");
 }
