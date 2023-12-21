@@ -6,9 +6,9 @@
 
 // Exercise 2
 const number = prompt("Enter your number: ");
-if (number.length == 5 && typeof number === "number") {
+if (Math.round(number) > 0 && number.length == 5) {
   const result = number.split("").join(" ");
   alert(result);
 } else {
-  alert("Write five-digit number!");
+  alert("Write a positive five-digit number!");
 }
