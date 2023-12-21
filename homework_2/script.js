@@ -6,7 +6,7 @@ alert(`Your full data is: ${firstData} ${secondData} ${thirdData}`);
 
 // Exercise 2
 const number = prompt("Enter your number: ");
-if (number.length == 5 && typeof parseInt(number) === "number") {
+if (number.length == 5 && typeof Number(number) === "number") {
   const result = number.split("").join(" ");
   alert(result);
 } else {
