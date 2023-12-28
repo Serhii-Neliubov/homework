@@ -24,7 +24,7 @@ let forBirthdayMessage = '';
     } else if(userCity) {
         forCityMessage = `Ти займаєшся спортом під назвою: ${userCity}`
     } else {
-        forCityMessage = 'Прикро, що ти нічого не написав у спорт :('
+        forCityMessage = 'Прикро, що ти нічого не написав у місто :('
     }
 
     if(userBirthdayYear){
