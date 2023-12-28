@@ -18,7 +18,7 @@ switch (operation){
     case 'div':
         const divResult = (firstNumber / secondNumber).toFixed(2);
         alert(`result: ${firstNumber} / ${secondNumber} = ${divResult}`);
-        break
+        break;
     default:
         alert('Write the correct operation!')
 }
