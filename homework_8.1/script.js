@@ -11,29 +11,29 @@ let forCityMessage = '';
 let forSportMessage = '';
 let forBirthdayMessage = '';
 
-    if(Object.keys(sports).find(() => userSport)){
-        forSportMessage = `Ти хочеш бути як ${sports[userSport]}?`;
-    } else if(userSport) {
-        forSportMessage = `Ти займаєшся спортом під назвою: ${userSport}`
-    } else {
-        forSportMessage = 'Прикро, що ти нічого не написав у спорт :('
-    }
+if(sports[userSport]){
+    forSportMessage = `Ти хочеш бути як ${sports[userSport]}?`;
+} else if(userSport.trim()) {
+    forSportMessage = `Ти займаєшся спортом під назвою: ${userSport}`
+} else {
+    forSportMessage = 'Прикро, що ти нічого не написав у спорт :('
+}
 
-    if(Object.keys(cities).find(() => userCity)){
-        forCityMessage = `Ти хочеш бути як ${cities[userCity]}?`;
-    } else if(userCity) {
-        forCityMessage = `Ти займаєшся спортом під назвою: ${userCity}`
-    } else {
-        forCityMessage = 'Прикро, що ти нічого не написав у місто :('
-    }
+if(cities[userCity]) {
+    forCityMessage = `Ти живеш у столиці ${cities[userCity]}?`;
+} else if(userCity.trim()) {
+    forCityMessage = `Ти живеш у місті: ${userCity}`
+} else {
+    forCityMessage = 'Прикро, що ти нічого не написав у місто :('
+}
 
-    if(userBirthdayYear){
-        forBirthdayMessage = `You are: ${currentYear - userBirthdayYear}`;
-    } else {
-        forCityMessage = 'Прикро, що ти нічого не написав у рік народження :('
-    }
+if(userBirthdayYear){
+    forBirthdayMessage = `You are: ${currentYear - userBirthdayYear}`;
+} else {
+    forCityMessage = 'Прикро, що ти нічого не написав у рік народження :('
+}
 
-    alert(`
+alert(`
         ${forBirthdayMessage},
         ${forCityMessage},
         ${forSportMessage}
