@@ -2,7 +2,7 @@ const userBirthdayYear = prompt('Write your birthday year: ');
 const userCity = prompt('Write your city: ');
 const userSport = prompt('Write your favorite sport: ');
 
-const currentYear = 2023;
+const currentYear = new Date().getFullYear();
 
 let forCityMessage = '';
 let forSportMessage = '';
