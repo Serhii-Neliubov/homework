@@ -16,13 +16,13 @@ for (let i = 10; i <= 100; i += 10){
 console.log('Exercise 3');
 const number = prompt('Write the number: ')
 
-if(!Math.round(Number(number))){
+if(!Number(number) || !number%1){
     alert('Write the correct number')
 }
 
-for (let i = 1; i*i < number; i++){
+for (let i = 1; i*i <= number; i++){
     if(i <= 100 && Math.pow(100, 2) >= number){
-        console.log(`${i} * ${i} (${i*i}) < `, number);
+        console.log(`${i} * ${i} (${i*i}) <= `, number);
     }
 }
 // Exercise 4
@@ -45,7 +45,7 @@ console.log('Exercise 5');
 const userNumber = prompt('Write the number: ')
 let dividerNumber;
 
-if(!Math.round(Number(userNumber))){
+if(!Number(userNumber) || !userNumber%1){
     alert('Write the correct number');
 }
 
