@@ -59,13 +59,28 @@ console.log('-----------Exercise 9-----------')
 console.log('Multiplication result positive numbers: ' + multiplicationPositiveNumbersResult)
 
 // Exercise 10
-const nullArray = [];
+console.log('-----------Exercise 10-----------')
+let maxNumber = arr[0];
+let maxNumberIndexInArray;
+const arrayLength = arr.length;
 
-for (let i = 0; i < arr.length - 1; i++){
-    nullArray.push(0);
+arr.forEach((number, index) => {
+    if(arr[index] > maxNumber){
+        maxNumber = arr[index];
+        maxNumberIndexInArray = index;
+    }
+})
+
+for(let i = 0; i <= maxNumberIndexInArray; i++){
+    arr.splice(arr[i], arr[i+1], 0);
 }
 
-console.log('-----------Exercise 10-----------')
-console.log('One biggest number and other will be 0 result: ', [...nullArray, maxArrayNumber])
+arr.push(maxNumber);
+
+for(let i = maxNumberIndexInArray + 1; i < arrayLength; i++){
+    arr.push(0);
+}
+
+console.log(maxNumber, maxNumberIndexInArray, arr)
 
 
