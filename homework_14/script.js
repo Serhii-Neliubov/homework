@@ -52,6 +52,15 @@ let users = [
         "gender": "female",
         "phone": "+1 (837) 586-3283",
         "address": "314 Dunne Place, Bawcomville, Guam, 9053"
+    },
+    {
+        "index": 6,
+        "isActive": false,
+        "balance": "$3,261.65",
+        "name": "Suzette Lewis",
+        "gender": "female",
+        "phone": "+1 (666) 666-6666",
+        "address": "314 Dunne Place, Bawcomville, Guam, 9053"
     }
 ]
 
@@ -60,16 +69,14 @@ const userFilteredBalance = usersParsedBalance.filter((balance) => balance > 200
 
 const phoneNumbers = []
 
-userFilteredBalance.forEach((balance) => {
-    users.forEach((user) => {
-        if(user.balance.slice(1, user.balance.length).split(',').join('') === balance){
-            phoneNumbers.push(user.phone)
-        }
-    })
+usersParsedBalance.forEach((balance, index) => {
+    if(balance > 2000) {
+        phoneNumbers.push(users[index].phone)
+    }
 })
 
-const usersAllBalance = userFilteredBalance.reduce((accumulator, balance) => accumulator + Number(balance), 0).toFixed(2)
+const usersAllBalance = usersParsedBalance.reduce((accumulator, balance) => accumulator + Number(balance), 0).toFixed(2)
 
 console.log(phoneNumbers)
-console.log('Users which have more than 200$: ', userFilteredBalance)
+console.log('Users which have more than 2000$: ', userFilteredBalance)
 console.log('All balanced: ', usersAllBalance)
