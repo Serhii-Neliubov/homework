@@ -1,19 +1,23 @@
-const length = prompt('Write the length: ')
-const data = prompt('Write the data: ');
-const result = []
-console.log(data.length)
-if(data.length === Number(length.trim())){
-    if(data.includes(' ')){
-        result.push(...data.split(' ').sort().splice(0, 2));
-        result.push(...data.split(' ').sort().splice(4, data.length));
-        console.log(result);
-    } else {
-        result.push(...data.split(',').sort().splice(0, 1));
-        result.push(...data.split(',').sort().splice(4, data.length));
-        console.log(result);
-    }
-} else {
-    alert('Dolboeb')
+const length = prompt("Write array length:");
+const array = [];
+
+if(isNaN(parseInt(length))){
+    alert('Write the correct number: ');
 }
 
+function compareNumbers(a, b) {
+    return a - b;
+}
 
+for (let i = 0; i < parseInt(length); i++) {
+    const element = prompt("Write the array element:");
+    if(Number(element) >= 0){
+        array.push(Number(element));
+    } else {
+        array.push(element)
+    }
+}
+
+array.sort(compareNumbers).splice(1, 3);
+
+console.log("Result:", array);
