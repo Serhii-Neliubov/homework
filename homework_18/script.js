@@ -1,7 +1,14 @@
-class mathOperations {
-    static pow(num, degree) {
-        console.log(num ** degree);
+function mathPow(num, degree) {
+    if (degree === 0) {
+        return 1;
+    }
+
+    else {
+        return num * mathPow(num, degree - 1);
     }
 }
 
-mathOperations.pow(10, 2);
+let number = 2;
+let degree = 3;
+let result = mathPow(2, 3);
+console.log(`${number}^${degree} = ${result}`);

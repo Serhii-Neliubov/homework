@@ -38,37 +38,37 @@ function doMath(x, y, sign) {
 doMath(4, 2, '*')
 
 // Exercise 3
-// function yourArray() {
-//     const columns = prompt('Write how many columns you want to have: ');
-//     const rows = prompt('Write how many rows you want to have in column: ');
-//     const arr = [];
-//
-//     if(isNaN(Number(columns))){
-//         alert('Write true value, please!');
-//         return null;
-//     } else if(isNaN(Number(rows))){
-//         alert('Write true value, please!');
-//         return null;
-//     }
-//
-//     for(let i = 0; i < Number(columns); i++){
-//         const columnValues = [];
-//
-//         for(let j = 0; j < Number(rows); j++){
-//             const value = prompt(`Write the value for | column - ${i + 1} | row - ${j + 1}: `);
-//             columnValues.push(value);
-//         }
-//
-//         arr.push({
-//             column: i + 1,
-//             values: columnValues,
-//         });
-//     }
-//
-//     console.log(arr);
-// }
-//
-// yourArray()
+function yourArray() {
+    const columns = prompt('Write how many columns you want to have: ');
+    const rows = prompt('Write how many rows you want to have in column: ');
+    const arr = [];
+
+    if(isNaN(Number(columns))){
+        alert('Write true value, please!');
+        return null;
+    } else if(isNaN(Number(rows))){
+        alert('Write true value, please!');
+        return null;
+    }
+
+    for(let i = 0; i < Number(columns); i++){
+        const columnValues = [];
+
+        for(let j = 0; j < Number(rows); j++){
+            const value = prompt(`Write the value for | column - ${i + 1} | row - ${j + 1}: `);
+            columnValues.push(value);
+        }
+
+        arr.push({
+            column: i + 1,
+            values: columnValues,
+        });
+    }
+
+    console.log(arr);
+}
+
+yourArray()
 
 // Exercise 4
 function removeLetters(string, letters) {
