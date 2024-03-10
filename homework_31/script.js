@@ -1,20 +1,41 @@
-const images = [
-    'img1.jpg',
-    'img2.jpg',
-    'img3.jpeg',
-    'img4.jpg',
-    'img5.jpg',
-    'img3.jpg',
-    'img7.jpg',
-    'img8.jpg',
-    'img9.jpg',
-];
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
 
-const index = Math.floor(Math.random() * images.length);
-const image = images[index];
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        if (i === index) {
+            slide.style.display = 'block';
+        } else {
+            slide.style.display = 'none';
+        }
+    });
 
-const imageBlock = document.createElement('img');
+    if (index === 0) {
+        document.getElementById('prevButton').style.display = 'none';
+    } else {
+        document.getElementById('prevButton').style.display = 'block';
+    }
 
-imageBlock.src = './images/' + image;
+    if (index === totalSlides - 1) {
+        document.getElementById('nextButton').style.display = 'none';
+    } else {
+        document.getElementById('nextButton').style.display = 'block';
+    }
+}
 
-document.body.appendChild(imageBlock);
+function nextSlide() {
+    if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+}
+
+function prevSlide() {
+    if (currentSlide > 0) {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+}
+
+showSlide(currentSlide);

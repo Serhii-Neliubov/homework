@@ -2,7 +2,7 @@ const images = [
     'img1.jpg',
     'img2.jpg',
     'img3.jpeg',
-    'img4.jpg',
+    'img3.jpg',
     'img5.jpg',
     'img3.jpg',
     'img7.jpg',
