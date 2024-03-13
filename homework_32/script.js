@@ -16,5 +16,5 @@ function generateList(array) {
 }
 
 let example = [1, 2, 3, [4.1, 4.2, 4.3], 5];
-const listContainer = document.getElementById("listContainer");
+const listContainer = document.getElementById("list");
 listContainer.innerHTML = generateList(example);
