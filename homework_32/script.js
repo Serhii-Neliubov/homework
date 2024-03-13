@@ -1,20 +1,20 @@
 function generateList(array) {
-    let result = "<ul>\n";
 
-    for (let item of array) {
-        result += "    <li>";
+    return array.reduce((result, item) => {
+        result += "    <li class='list-item'>";
+
         if (Array.isArray(item)) {
             result += generateList(item);
         } else {
             result += item;
         }
-        result += "</li>\n";
-    }
 
-    result += "</ul>\n";
-    return result;
+        result += "</li>\n";
+        return result;
+    }, "<ul>\n") + "</ul>\n";
+
 }
 
 let example = [1, 2, 3, [4.1, 4.2, 4.3], 5];
-
-console.log(generateList(example));
+const listContainer = document.getElementById("listContainer");
+listContainer.innerHTML = generateList(example);
