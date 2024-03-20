@@ -9,32 +9,44 @@
 <body>
 <h2>Order Form</h2>
 <form id="orderForm">
-    <label for="name">Customer's Full Name:</label>
-    <input type="text" id="name" required><br><br>
+    <label>
+        Customer's Full Name:
+        <input type="text" id="name" required><br><br>
+    </label>
 
-    <label for="city">City:</label>
-    <select id="city" required>
-        <option value="">Select a city</option>
-        <option value="Kyiv">Kyiv</option>
-        <option value="Kharkiv">Kharkiv</option>
-        <option value="Lviv">Lviv</option>
-    </select><br><br>
+    <label>
+        City:
+        <select id="city" required>
+            <option value="">Select a city</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Kharkiv">Kharkiv</option>
+            <option value="Lviv">Lviv</option>
+        </select><br><br>
+    </label>
 
-    <label for="delivery">Nova Poshta Warehouse for Delivery:</label>
-    <input type="text" id="delivery" required><br><br>
+    <label>
+        Nova Poshta Warehouse for Delivery:
+        <input type="text" id="delivery" required><br><br>
+    </label>
 
-    <label for="payment">Payment Method:</label>
-    <select id="payment" required>
-        <option value="">Select a payment method</option>
-        <option value="Cash on Delivery">Cash on Delivery</option>
-        <option value="Credit Card Payment">Credit Card Payment</option>
-    </select><br><br>
+    <label>
+        Payment Method:
+        <select id="payment" required>
+            <option value="">Select a payment method</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="Credit Card Payment">Credit Card Payment</option>
+        </select><br><br>
+    </label>
 
-    <label for="quantity">Quantity of Products Purchased:</label>
-    <input type="number" id="quantity" required><br><br>
+    <label>
+        Quantity of Products Purchased:
+        <input type="number" id="quantity" required><br><br>
+    </label>
 
-    <label for="comment">Order Comment:</label><br>
-    <textarea id="comment"></textarea><br><br>
+    <label>
+        Order Comment:
+        <textarea id="comment"></textarea><br><br>
+    </label><br>
 
     <button type="button" onclick="submitOrder()">Confirm Order</button>
 </form>
