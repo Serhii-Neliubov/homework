@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form | Homework 35</title>
+    <script src="script.js"></script>
+</head>
+<body>
+<form id="registrationForm">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br>
+
+    <label for="birthdate">Date of Birth:</label>
+    <input type="text" id="birthdate" name="birthdate"><br>
+
+    <label>
+        Gender:<br>
+        <label>
+            Male
+            <input type="radio" id="male" name="gender" value="male">
+        </label>
+        <label>
+            Female
+            <input type="radio" id="female" name="gender" value="female">
+        </label>
+    </label><br>
+
+    <label>
+        City:
+        <select id="city" name="city">
+            <option value="Kiev">Kiev</option>
+            <option value="Kharkov">Kharkov</option>
+            <option value="Lvov">Lvov</option>
+        </select><br>
+    </label>
+
+    <label>
+        Address:<br>
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br>
+    </label><br>
+
+    <label>
+        Animals which you have:<br>
+        <label>
+            Cat
+            <input type="checkbox" id="cat" name="animal_cat" value="cat">
+        </label>
+        <label>
+            Rat
+            <input type="checkbox" id="rat" name="animal_rat" value="rat">
+        </label>
+        <label>
+            Dog
+            <input type="checkbox" id="dog" name="animal_dog" value="dog">
+        </label>
+    </label><br>
+
+    <button type="button" onclick="displayData()">Save</button>
+</form>
+
+<div id="outputTable"></div>
+
+</body>
+</html>
