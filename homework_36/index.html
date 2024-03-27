@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <script src="script.js"></script>
+</head>
+<body>
+<h2>Order Form</h2>
+<form id="orderForm">
+    <label>
+        Customer's Full Name:
+        <input type="text" id="name" required><br><br>
+    </label>
+
+    <label>
+        City:
+        <select id="city" required>
+            <option value="">Select a city</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Kharkiv">Kharkiv</option>
+            <option value="Lviv">Lviv</option>
+        </select><br><br>
+    </label>
+
+    <label>
+        Nova Poshta Warehouse for Delivery:
+        <input type="text" id="delivery" required><br><br>
+    </label>
+
+    <label>
+        Payment Method:
+        <select id="payment" required>
+            <option value="">Select a payment method</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="Credit Card Payment">Credit Card Payment</option>
+        </select><br><br>
+    </label>
+
+    <label>
+        Quantity of Products Purchased:
+        <input type="number" id="quantity" required><br><br>
+    </label>
+
+    <label>
+        Order Comment:
+        <textarea id="comment"></textarea><br><br>
+    </label><br>
+
+    <button type="button" onclick="submitOrder()">Confirm Order</button>
+</form>
+
+<h2>Orders Information</h2>
+<div id="orderList"></div>
+
+<button onclick="showMyOrders()">My Orders</button>
+
+</body>
+</html>
